@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<style>
+		body {
+			background-color: #11e9ed;
+		}
+	nav{
+      background: lightgray;
+      height: 120px;
+      width: 100%;
+      display: flex;
+      
+    }
+    .navbar{
+      width: 100%;
+      height: 170px;
+      margin: auto;
+      padding: 5, 0px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+    }
+
+    .logo{
+      width: 180px;
+      cursor: pointer;
+      border-radius: 20px;
+      margin-top: 15px;
+      margin-left: 50px;
+      height: 150px;
+    }
+
+    .navbar ul li{
+      list-style: none;
+      display: inline-block;
+      margin: 0 20px;
+      position: relative;
+
+    }
+    .navbar ul li a{
+      text-decoration: none;
+      color:black;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-weight: 100;
+    }
+    .navbar ul li ::after{
+      content: '';
+      height: 3px;
+      width: 0%;
+      background: black;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      transition: 0.3s;
+    }
+    .navbar ul li :hover::after{
+      width: 100%;
+    }
+    input{
+    font-family: sans-serif;
+    width: 200px;
+    height: 38px;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top:15px;
+    border: 2px solid black;
+    position: relative;
+    left: 1040px;
+   }
+		.meto {
+			float: left;
+			padding: 10px;
+		}
+		.dhug {
+			float: left;
+			padding: 10px;
+		}
+		.khorlo {
+			float: left;
+		}
+		.p1 {
+			text-align: right;
+			font-family: sans-serif;
+      font-size: 20px;
+		}
+		.p2 {
+			text-align: right;
+			font-family: sans-serif;
+      font-size: 20px;
+		}
+		.p3 {
+			text-align: right;
+			font-family: sans-serif;
+      font-size: 20px;
+		}
+		h2 {
+			text-align: right;
+			font-family: sans-serif;
+		}
+		.time{
+      color: black;
+
+}
+    .date{
+      color: black;
+    }
+
+    #time{
+      color: black;
+
+    }
+    #date{
+      color: black;
+    }
+    .time_date{
+      position: relative;
+      left: 1100px;
+    }
+      h3{
+      text-align: center;
+      font-size: 20px;
+      font-family: sans-serif;
+    }
+    button a{
+      text-decoration: none;
+      color: black;
+      transition: 0.3s ease;
+
+    }
+    button a:hover{
+      color: grey;
+      cursor: pointer;
+
+    }
+		.footer{
+      background: lightgray;
+      height: 150px;
+      width: 100%;
+      margin-top: 200px;
+    }
+    
+    .footer ul{
+      list-style: none;
+      color: black;
+
+    }
+    
+    .footer-col{
+      width: 25%;
+      padding: 0 10px;
+    }
+    .footer h1{
+      color: black;
+      font-family: sans-serif;
+    }
+    .media a{
+      color: black;
+      margin-right: 30px;
+      font-size: 30px;
+
+    }
+    .media a:hover{
+      transition: 0.3s ease;
+      color: blue;
+
+    }
+	</style>
+	  <script>
+    function updateDateTime() {
+      var currentDate = new Date();
+      var dateElement = document.getElementById("date");
+      var timeElement = document.getElementById("time");
+
+      // Format the date
+      var options = { year: 'numeric', month: 'long', day: 'numeric' };
+      var formattedDate = currentDate.toLocaleDateString(undefined, options);
+
+      // Format the time
+      var formattedTime = currentDate.toLocaleTimeString();
+
+      // Update the HTML elements
+      dateElement.innerHTML = formattedDate;
+      timeElement.innerHTML = formattedTime;
+    }
+
+// Update the date and time every second
+    setInterval(updateDateTime, 1000);
+  </script>
+</head>
+<header>
+  <div class="navbar">
+      <img class="logo" src="C:\Users\DSP\Desktop\Project\logo.1-removebg-preview.png">
+      <ul>
+        <li><a href="transportation.html"><i class="fa-solid fa-house"></i>Home</a></li>
+        <li><a href="aboutus.html"><i class="fa-solid fa-user"></i>About us</a></li>
+        <li><a href="history.html"><i class="fa-sharp fa-solid fa-clock-rotate-left"></i>History</a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-phone"></i>Contact</a></li>
+      </ul>
+      
+    </div>
+</header>
+<body>
+	 <nav>
+    <p></p>
+<div class="time_date">
+  <p class="date">Date: <span id="date"></span></p>
+    <p class="time">Time: <span id="time"></span></p>
+</div>
+  </nav>
+  <form action="https://www.google.com/search" method="GET">
+                <input type="text" placeholder="&#xf002; search any" name="q"></form>
+	<center><h1>About Ticket</h1></center>
+	<br>
+	<br>
+
+
+<img src="C:\Users\DSP\Desktop\Project\meto.jpg" height="200px" width="800px"class="meto">
+<h2>METO TRANSPORT</h2>
+	<p class="p1">This ticket is for people who wants to travel from<br> Thimphu to Trashigang.<br>
+	Timing for this bus is 1.(7 A.M) 2.(8 A.M)<br>3.(9 A.M)<br>
+	The price for this ticket is Nu.1250.<br>
+   Number of seat contain are 23.</p>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   
+
+ <img src="C:\Users\DSP\Desktop\Project\gelephu.jpg" height="200px" width="800px" class="dhug">
+ <h2>DHUG TRANSPORT</h2>
+   <p class="p2">This ticket is for people who wants to travel from<br> Thimphu to Gelephu.<br>
+   	Timing for this bus is 1.(7 A.M) 2.(8 A.M)<br> 3.(9 A.M)<br>
+	The price for this ticket is Nu.640.<br>
+   Number of seat contain are 23.</p>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+
+   <img src="C:\Users\DSP\Desktop\Project\phuntsholing.jpg" height="200px" width="800px" class="khorlo">
+   <h2>KHORLO TRANSPORT</h2>
+   <p class="p3">This ticket is for people who wants to travel from<br> Thimphu to Phuntsholing.<br>
+   	Timing for this bus is 1.(7 A.M) 2.(8 A.M)<br> 3.(9 A.M)<br>
+	The price for this ticket is Nu.700.<br>
+   Number of seat contain are 23.</p>
+   <br>
+   <br>
+   <br>
+
+   <h3> BOOK TICKET </h3>
+
+<center><button><a href="ticketinf.html">BOOK NOW</button></a></center>
+
+</body>
+<footer class="footer">
+<center><div class="footer-col">
+          <h1>Follow us:</h1>
+          <div class="media">
+        <a href=""><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fab fa-twitter"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>  
+      
+    </div></center>
+  </footer>
+</html>

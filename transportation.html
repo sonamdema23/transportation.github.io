@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <style>
+    nav{
+      background: gray;
+      height: 120px;
+      width: 100%;
+      display: flex;
+      margin-top: 20px;
+      
+    }
+
+    .banner{
+      width: 100%;
+      height: 100vh;
+      background: url(img4.jpg);
+      background-size: cover;
+      background-position: center;
+      margin-top: 5px;
+
+    }
+    .navbar{
+      width: 100%;
+      margin: auto;
+      padding: 5, 0px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+    }
+
+    .logo{
+      width: 180px;
+      cursor: pointer;
+      border-radius: 20px;
+      margin-top: 15px;
+      margin-left: 40px;
+    }
+    .navbar ul li{
+      list-style: none;
+      display: inline-block;
+      margin: 0 20px;
+      position: relative;
+
+    }
+    .navbar ul li a{
+      text-decoration: none;
+      color: black;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-weight: 100;
+    }
+    .navbar ul li ::after{
+      content: '';
+      height: 3px;
+      width: 0%;
+      background: white;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      transition: 0.3s;
+    }
+    .navbar ul li :hover::after{
+      width: 100%;
+    }
+    .content{
+      width: 100%;
+      position: absolute;
+      text-align: center;
+      top: 80%;
+      color: #fff;
+
+    }
+
+    .content h1{
+      font-size: 45px;
+      margin-top: 1px;
+      font-family: sans-serif;
+      color: black;
+
+      }
+
+    .content p{
+      margin: 20px auto;
+      font-weight: 100;
+      line-height: 25px;
+      font-size: 30px;
+      font-family: sans-serif;
+      color: black;
+
+    }
+
+    .time{
+      color: black;
+
+    
+    }
+    .date{
+      color: black;
+    }
+
+    #time{
+      color: black;
+
+    }
+    #date{
+      color: black;
+    }
+    .time_date{
+      position: relative;
+      left: 1100px;
+
+    }
+    .footer{
+      background: gray;
+      margin-top: 10px;
+      height: 150px;
+      width: 100%;
+      
+
+    }
+    
+    .footer ul{
+      list-style: none;
+      color: black;
+
+    }
+    
+    .footer-col{
+      width: 25%;
+      padding: 0 10px;
+    }
+    .footer h1{
+      color: black;
+      font-family: sans-serif;
+    }
+    .media a{
+      color: black;
+      margin-right: 30px;
+      font-size: 30px;
+
+    }
+    .media a:hover{
+      transition: 0.3s ease;
+      color: blue;
+
+    }
+
+  </style>
+  <script>
+    function updateDateTime() {
+      var currentDate = new Date();
+      var dateElement = document.getElementById("date");
+      var timeElement = document.getElementById("time");
+
+      // Format the date
+      var options = { year: 'numeric', month: 'long', day: 'numeric' };
+      var formattedDate = currentDate.toLocaleDateString(undefined, options);
+
+      // Format the time
+      var formattedTime = currentDate.toLocaleTimeString();
+
+      // Update the HTML elements
+      dateElement.innerHTML = formattedDate;
+      timeElement.innerHTML = formattedTime;
+    }
+
+    // Update the date and time every second
+    setInterval(updateDateTime, 1000);
+
+
+    
+
+  </script>
+</head>
+<header>
+  <div class="navbar">
+      <img class="logo" src="C:\Users\DSP\Desktop\Project\logo.1-removebg-preview.png">
+      <ul>
+        <li><a href="aboutus.html"><i class="fa-solid fa-user"></i>About us</a></li>
+        <li><a href="history.html"><i class="fa-sharp fa-solid fa-clock-rotate-left"></i>History</a></li>
+        <li><a href="service.html"><i class="fa-solid fa-taxi"></i>Service</a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-phone"></i>Contact</a></li>
+      </ul>
+       
+    </div>
+  
+</header>
+<body>
+  <nav>
+    <p></p>
+<div class="time_date">
+  <p class="date">Date: <span id="date"></span></p>
+    <p class="time">Time: <span id="time"></span></p>
+</div>
+  </nav>
+
+<br><br>
+  <div class="banner">
+
+      <a href="#" onmouseover="document.images['myImage'].src = image2.src;"
+     onmouseout="document.images['myImage'].src = image1.src">
+    <img name="myImage" src="">
+  </a> 
+    
+    <div class="content">
+      <h1>Transportation</h1>
+      <p>Road construction began in earnest during the First Development Plan (1961–66). <br>The first 175-kilometre-long (109 mi)paved road was completed in 1962.</p>
+    
+    </div><br><br>
+
+  </div>
+  <footer class="footer">
+<center><div class="footer-col">
+          <h1>Follow us:</h1>
+          <div class="media">
+        <a href=""><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fab fa-twitter"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>  
+      
+    </div></center>          
+
+    
+  </footer>
+
+</body>
+</html>

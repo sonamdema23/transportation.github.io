@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+   <link rel="stylesheet" type="text/css" href="  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style type="text/css">
+    nav{
+      background: gray;
+      height: 120px;
+      width: 100%;
+      display: flex;
+      
+    }
+.navbar{
+      width: 100%;
+      height: 170px;
+      margin: auto;
+      padding: 5, 0px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+    }
+
+    .logo{
+      width: 180px;
+      cursor: pointer;
+      border-radius: 20px;
+      margin-top: 15px;
+      margin-left: 50px;
+    }
+
+    .navbar ul li{
+      list-style: none;
+      display: inline-block;
+      margin: 0 20px;
+      position: relative;
+
+    }
+    .navbar ul li a{
+      text-decoration: none;
+      color:black;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-weight: 100;
+    }
+    .navbar ul li ::after{
+      content: '';
+      height: 3px;
+      width: 0%;
+      background: black;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      transition: 0.3s;
+    }
+    .navbar ul li :hover::after{
+      width: 100%;
+    }
+      .content{
+      width: 100%;
+      position: absolute;
+      text-align: center;
+      top: 80%;
+      color: #fff;
+
+    }
+
+    .content h1{
+      font-size: 45px;
+      margin-top: 1px;
+      font-family: sans-serif;
+      color:honeydew;
+
+      }
+
+    .content p{
+      margin: 20px auto;
+      font-weight: 100;
+      line-height: 25px;
+      font-size: 20px;
+      font-family: sans-serif;
+      color:greenyellow;
+
+    }
+
+    .time{
+      color: black;
+
+    
+    }
+    .date{
+      color: black;
+    }
+
+    #time{
+      color: black;
+
+    }
+    #date{
+      color: black;
+    }
+    .time_date{
+      position: relative;
+      left: 1100px;
+    }
+    .submit{
+      position: relative;
+      left: 10px;
+      background: skyblue;
+      border: none;
+    }
+    .container{
+      display: flex;
+      flex-wrap: wrap;
+      border-bottom: 2px solid black;
+
+    }
+
+    .container img{
+      height: 400px;
+      width: 50%;
+    }
+    .container ul {
+      list-style: none;
+    }
+    .container ul li{
+      text-align: center;
+      position: relative;
+      left: 80px;
+      font-size: 30px;
+    }
+    h1{
+      text-align: center;
+      font-family: sans-serif;
+      font-size: 50px;
+    }
+
+    .container h1{
+      font-size: 60px;
+      font-family: sans-serif;
+      position: relative;
+      left: 18%;
+      
+    }
+    button{
+      height: 30px;
+      background: skyblue;
+      border: none;
+      position: relative;
+      left: 45%;
+      width: 90px;
+      border-radius: 10px;
+    }
+    h2{
+      text-align: center;
+      font-size: 20px;
+      font-family: sans-serif;
+    }
+    button a{
+      text-decoration: none;
+      color: black;
+      transition: 0.3s ease;
+    }
+    button a:hover{
+      color: grey;
+      cursor: pointer;
+
+    }
+    .footer{
+      background: gray;
+      margin-top: 10px;
+      height: 150px;
+      width: 100%;
+      
+
+    }
+    
+    .footer ul{
+      list-style: none;
+      color: black;
+
+    }
+    
+    .footer-col{
+      width: 25%;
+      padding: 0 10px;
+    }
+    .footer h1{
+      color: black;
+      font-family: sans-serif;
+    }
+    .media a{
+      color: black;
+      margin-right: 30px;
+      font-size: 30px;
+
+    }
+    .media a:hover{
+      transition: 0.3s ease;
+      color: blue;
+
+    }
+</style>
+  <script>
+    function updateDateTime() {
+      var currentDate = new Date();
+      var dateElement = document.getElementById("date");
+      var timeElement = document.getElementById("time");
+
+      // Format the date
+      var options = { year: 'numeric', month: 'long', day: 'numeric' };
+      var formattedDate = currentDate.toLocaleDateString(undefined, options);
+
+      // Format the time
+      var formattedTime = currentDate.toLocaleTimeString();
+
+      // Update the HTML elements
+      dateElement.innerHTML = formattedDate;
+      timeElement.innerHTML = formattedTime;
+    }
+// Update the date and time every second
+    setInterval(updateDateTime, 1000);
+  </script>
+</head>
+<header>
+  <div class="navbar">
+      <img class="logo" src="C:\Users\DSP\Desktop\Project\logo.1-removebg-preview.png">
+      <ul>
+         <li><a href="transportation.html"><i class="fa-solid fa-house"></i>Home</a></li>
+        <li><a href="aboutus.html"><i class="fa-solid fa-user"></i>About us</a></li>
+        <li><a href="history.html"><i class="fa-sharp fa-solid fa-clock-rotate-left"></i>History</a></li>
+        <li><a href="service.html"><i class="fa-solid fa-taxi"></i>Service</a></li>
+      </ul>
+      
+    </div>
+  
+</header>
+<body>
+  <nav>
+        <p></p>
+<div class="time_date">
+  <p class="date">Date: <span id="date"></span></p>
+    <p class="time">Time: <span id="time"></span></p>
+</div>
+  </nav>
+  
+    <h1>Here is our contact details</h1>
+
+
+<div class="container">
+
+  <img src="C:\Users\DSP\Desktop\Project\pic.jpg">
+    <ul>
+      <h1>contact us</h1>
+      <p></p>
+      <li>phone: +975-16674234/+975-7723882</li>
+      <li>Gmail: bhutantransport@gmail.com</li>
+      <li>location:Thimphu</li>
+
+    </ul>
+
+
+</div>
+
+<h2> Ticket information </h2>
+
+<button><a href="learn.html">Ticket</button></a>
+
+</body>
+  <footer class="footer">
+<center><div class="footer-col">
+          <h1>Follow us:</h1>
+          <div class="media">
+      <a href=""><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fab fa-twitter"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-linkedin-in"></i></a></div>
+          </div>
+        </div>  
+      
+
+    
+  </footer>
+</html>
